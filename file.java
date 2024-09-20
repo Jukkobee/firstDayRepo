@@ -58,5 +58,7 @@ public class file {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        printTotalFileSize("example1.txt", "example2.txt");
     }
 }
