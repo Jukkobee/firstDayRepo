@@ -1,9 +1,21 @@
 
-import java.io.*; 
+import java.io.*;
 import java.nio.file.*;
 import java.nio.charset.StandardCharsets;
 
 public class file {
+    private static void printTotalFileSize(String... fileNames) { // String... representats a variable number of
+                                                                  // inputs/parameters
+        long totalSize = 0;
+        for (String fileName : fileNames) {
+            File file = new File(fileName);
+            if (file.exists()) {
+                totalSize += file.length();
+            }
+        }
+        System.out.println("Total size of all files: " + totalSize + " bytes");
+    }
+
     public static void main(String[] args) {
         String data = "Hello, World!";
         String fileName1 = "example1.txt";
@@ -48,14 +60,3 @@ public class file {
         }
     }
 }
-/*haha
- * asdafa
- * sdf
- * asdfas
- * dfas
- * dfcas
- * fv
- * asdfv
- * asdf
- * sa
- */
